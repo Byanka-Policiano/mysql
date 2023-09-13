@@ -50,12 +50,16 @@ create table tbl_reserva(
 	foreign key (id_quarto_suite) references tbl_quarto_suite(id_quarto_suite),
 	foreign key (id_evento) references tbl_evento(id_evento)
 );
+
 create table tbl_manutenção(
 	id_funcionario int,
 	id_quarto_suite int,
 	foreign key (id_funcionario) references tbl_funcionario(id_funcionario),
 	foreign key (id_quarto_suite) references tbl_quarto_suite(id_quarto_suite)
 );
+
+
+
 create table tbl_organização(
 	id_funcionario int,
 	id_evento int,
