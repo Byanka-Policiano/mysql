@@ -86,28 +86,28 @@ EXEC sp_rename 'tbl_organização', 'tbl_organizacao';
 insert into tbl_cliente(id_cliente, nome, contato)
 values (2, 'José', 5581988838195);
 --selecionar os dados de uma tabela
-select * from tbl_cliente
+select * from tbl_cliente;
 
 insert into tbl_endereco(id_endereco, rua, numero, uf, cep, bairro, cidade)
-values (5, 'Jerusalém', '12', 'RN', '59088107', 'Neópolis', 'Natal')
-select * from tbl_endereco
+values (5, 'Jerusalém', '12', 'RN', '59088107', 'Neópolis', 'Natal');
+select * from tbl_endereco;
 
 insert into tbl_evento(id_evento, nome, dia, horario, num_participantes, tipo)
-values(3, 'The Weeknd', '2023-12-15', '20:30:00', 12, 'Show')
-select * from tbl_evento
+values(3, 'The Weeknd', '2023-12-15', '20:30:00', 12, 'Show');
+select * from tbl_evento;
 
 insert into tbl_funcionario(id_funcionario, nome, cargo)
-values (2, 'Arlindo', 'zelador')
-select * from tbl_funcionario
+values (2, 'Arlindo', 'zelador');
+select * from tbl_funcionario;
 
 insert into tbl_quarto_suite(id_quarto_suite, capacidade, preco_noite, comodidades, cama)
-values (105, 4, 249.99, 'ar-condicionado, televisão, frigobar', 'Queen')
-select * from tbl_quarto_suite
+values (105, 4, 249.99, 'ar-condicionado, televisão, frigobar', 'Queen');
+select * from tbl_quarto_suite;
 
 insert into tbl_manutencao(id_funcionario, id_quarto_suite)
-values (14, 105)
-select * from tbl_manutencao
+values (14, 105);
+select * from tbl_manutencao;
  
 insert into tbl_reserva(cod_evento, cod_quarto_suite, id_cliente, id_evento, id_funcionario, id_quarto_suite)
-values (5, 12, 2, 3, 14, 105)
-select * from tbl_reserva
+values (5, 12, 2, 3, 14, 105);
+select * from tbl_reserva; 
