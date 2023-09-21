@@ -102,7 +102,8 @@ select * from tbl_funcionario;
 
 insert into tbl_quarto_suite(id_quarto_suite, capacidade, preco_noite, comodidades, cama)
 values (105, 4, 249.99, 'ar-condicionado, televisão, frigobar', 'Queen');
-select * from tbl_quarto_suite;
+select * from tbl_quarto_suite
+where id_quarto_suite like '%5';
 
 insert into tbl_manutencao(id_funcionario, id_quarto_suite)
 values (14, 105);
@@ -111,3 +112,12 @@ select * from tbl_manutencao;
 insert into tbl_reserva(cod_evento, cod_quarto_suite, id_cliente, id_evento, id_funcionario, id_quarto_suite)
 values (5, 12, 2, 3, 14, 105);
 select * from tbl_reserva; 
+
+
+select tbl_cliente.nome, tbl_cliente.contato, tbl_cliente.id_cliente
+from tbl_cliente
+join tbl_reserva on tbl_cliente.id_cliente = tbl_reserva.id_cliente
+where tbl_reserva.cod_quarto_suite = '12';
+
+select * from tbl_cliente
+where contato like '55%';
